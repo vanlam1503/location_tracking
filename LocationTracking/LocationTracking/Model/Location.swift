@@ -11,6 +11,7 @@ struct Location: Codable {
     
     var lat: Double = 0
     var lng: Double = 0
+    var name: String = ""
     
     init(lat: Double, lng: Double) {
         self.lat = lat

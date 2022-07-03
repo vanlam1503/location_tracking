@@ -15,13 +15,15 @@ struct DefaultUseCaseProvider: UseCaseProvider {
 
     private let locationManager: LocationManager
     private let locationCache: Cache
+    private let storage: StorageManager
 
-    init(locationManager: LocationManager, locationCache: LocationCache) {
+    init(locationManager: LocationManager, locationCache: LocationCache, storage: StorageManager) {
         self.locationManager = locationManager
         self.locationCache = locationCache
+        self.storage = storage
     }
 
     func makeHomeUseCase() -> HomeUseCase {
-        DefaultHomeUseCase(locationManager: locationManager, locationCache: locationCache)
+        DefaultHomeUseCase(locationManager: locationManager, locationCache: locationCache, storage: storage)
     }
 }

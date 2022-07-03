@@ -15,7 +15,10 @@ struct Application {
     private init() {
         let locationManager = DefaultLocationManager()
         let locationCache = LocationCache()
-        useCaseProvider = DefaultUseCaseProvider(locationManager: locationManager, locationCache: locationCache)
+        useCaseProvider = DefaultUseCaseProvider(
+            locationManager: locationManager,
+            locationCache: locationCache,
+            storage: .shared)
     }
     
     func configure(in window: UIWindow?) {

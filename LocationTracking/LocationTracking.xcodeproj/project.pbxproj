@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE12127128712AE300FDFFC9 /* Storage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE12126F28712AE300FDFFC9 /* Storage.xcdatamodeld */; };
+		FE1212732871306800FDFFC9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1212722871306800FDFFC9 /* StorageManager.swift */; };
+		FE12127528718D5A00FDFFC9 /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12127428718D5A00FDFFC9 /* NSManagedObject+Extensions.swift */; };
 		FED260A928701C87001BBF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260A828701C87001BBF94 /* AppDelegate.swift */; };
 		FED260B228701C8B001BBF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED260B128701C8B001BBF94 /* Assets.xcassets */; };
 		FED260B528701C8B001BBF94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED260B328701C8B001BBF94 /* LaunchScreen.storyboard */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE12127028712AE300FDFFC9 /* Storage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storage.xcdatamodel; sourceTree = "<group>"; };
+		FE1212722871306800FDFFC9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		FE12127428718D5A00FDFFC9 /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
 		FED260A528701C87001BBF94 /* LocationTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED260A828701C87001BBF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED260B128701C8B001BBF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE12126C28712ABD00FDFFC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE12126F28712AE300FDFFC9 /* Storage.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FED2609C28701C87001BBF94 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 		FED260A728701C87001BBF94 /* LocationTracking */ = {
 			isa = PBXGroup;
 			children = (
+				FE12126C28712ABD00FDFFC9 /* Resources */,
 				FED260F92870423D001BBF94 /* Model */,
 				FED260F2287026CC001BBF94 /* Manager */,
 				FED260EF28702154001BBF94 /* Provider */,
@@ -170,10 +185,10 @@
 		FED260DB28701D34001BBF94 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FED260ED28702107001BBF94 /* HomeUseCase.swift */,
 				FED260DC28701D53001BBF94 /* HomeVC.swift */,
 				FED260DD28701D53001BBF94 /* HomeVC.xib */,
 				FED260E028701D6A001BBF94 /* HomeViewModel.swift */,
-				FED260ED28702107001BBF94 /* HomeUseCase.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -189,11 +204,12 @@
 		FED260EA2870203C001BBF94 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FED260EB28702053001BBF94 /* ObservableConvertibleType+Extensions.swift */,
 				FED260F528703111001BBF94 /* CLLocationManager+Rx.swift */,
 				FED260FC2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift */,
-				FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */,
 				FED26100287125B6001BBF94 /* MKMapView+Extensions.swift */,
+				FE12127428718D5A00FDFFC9 /* NSManagedObject+Extensions.swift */,
+				FED260EB28702053001BBF94 /* ObservableConvertibleType+Extensions.swift */,
+				FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 			children = (
 				FED260F3287027DF001BBF94 /* LocationManager.swift */,
 				FED260F728703EDD001BBF94 /* LocationCache.swift */,
+				FE1212722871306800FDFFC9 /* StorageManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -361,8 +378,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1212732871306800FDFFC9 /* StorageManager.swift in Sources */,
 				FED26101287125B6001BBF94 /* MKMapView+Extensions.swift in Sources */,
+				FE12127128712AE300FDFFC9 /* Storage.xcdatamodeld in Sources */,
 				FED260DE28701D53001BBF94 /* HomeVC.swift in Sources */,
+				FE12127528718D5A00FDFFC9 /* NSManagedObject+Extensions.swift in Sources */,
 				FED260EE28702107001BBF94 /* HomeUseCase.swift in Sources */,
 				FED260F828703EDD001BBF94 /* LocationCache.swift in Sources */,
 				FED260DA28701D10001BBF94 /* Application.swift in Sources */,
@@ -735,6 +755,19 @@
 			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FE12126F28712AE300FDFFC9 /* Storage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE12127028712AE300FDFFC9 /* Storage.xcdatamodel */,
+			);
+			currentVersion = FE12127028712AE300FDFFC9 /* Storage.xcdatamodel */;
+			path = Storage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FED2609D28701C87001BBF94 /* Project object */;
 }

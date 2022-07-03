@@ -19,6 +19,7 @@ struct HomeViewModel: ViewModelType {
         let requestAuthorization: Driver<Void>
         let location: Driver<Location>
         let error: Driver<Error>
+        let locations: Driver<[Location]>
     }
     
     private let useCase: HomeUseCase
@@ -38,11 +39,16 @@ struct HomeViewModel: ViewModelType {
             .share()
         let location = didUpdateLocation.onSuccess()
         let error = didUpdateLocation.onFailure()
+        // FetchAll
+        let locations = trigger
+            .asObservable()
+            .flatMapLatest(useCase.fetchAllLocations)
         
         return Output(
             requestAuthorization: requestAuthorization.asDriverOnEmpty(),
             location: location.asDriverOnEmpty(),
-            error: error.asDriverOnEmpty()
+            error: error.asDriverOnEmpty(),
+            locations: locations.asDriverOnEmpty()
         )
     }
 }

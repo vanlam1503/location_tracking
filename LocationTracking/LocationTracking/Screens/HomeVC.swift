@@ -55,15 +55,28 @@ final class HomeVC: UIViewController {
         output.location
             .drive(onNext: { [weak self] location in
                 self?.mapView.centerToLocation(CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng))
-                self?.addAnnotation(location: location)
+//                self?.addAnnotation(location: location)
             })
             .disposed(by: bag)
+        
+        output.locations.drive(onNext: { [weak self] locations in
+            self?.addAnnotations(locations: locations)
+        }).disposed(by: bag)
     }
     
     private func addAnnotation(location: Location) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
         mapView.addAnnotation(annotation)
+    }
+    
+    private func addAnnotations(locations: [Location]) {
+        let annotations: [MKAnnotation] = locations.map { location -> MKAnnotation in
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
+            return annotation
+        }
+        mapView.addAnnotations(annotations)
     }
     
     private func notify() {
