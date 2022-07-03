@@ -28,6 +28,8 @@
 		FED260F828703EDD001BBF94 /* LocationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260F728703EDD001BBF94 /* LocationCache.swift */; };
 		FED260FB2870424F001BBF94 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260FA2870424F001BBF94 /* Location.swift */; };
 		FED260FD2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260FC2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift */; };
+		FED260FF287123A7001BBF94 /* ObservableType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */; };
+		FED26101287125B6001BBF94 /* MKMapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26100287125B6001BBF94 /* MKMapView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		FED260F728703EDD001BBF94 /* LocationCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCache.swift; sourceTree = "<group>"; };
 		FED260FA2870424F001BBF94 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FED260FC2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extensions.swift"; sourceTree = "<group>"; };
+		FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extensions.swift"; sourceTree = "<group>"; };
+		FED26100287125B6001BBF94 /* MKMapView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 				FED260EB28702053001BBF94 /* ObservableConvertibleType+Extensions.swift */,
 				FED260F528703111001BBF94 /* CLLocationManager+Rx.swift */,
 				FED260FC2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift */,
+				FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */,
+				FED26100287125B6001BBF94 /* MKMapView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED26101287125B6001BBF94 /* MKMapView+Extensions.swift in Sources */,
 				FED260DE28701D53001BBF94 /* HomeVC.swift in Sources */,
 				FED260EE28702107001BBF94 /* HomeUseCase.swift in Sources */,
 				FED260F828703EDD001BBF94 /* LocationCache.swift in Sources */,
@@ -365,6 +372,7 @@
 				FED260E428701D85001BBF94 /* ViewModelType.swift in Sources */,
 				FED260F628703111001BBF94 /* CLLocationManager+Rx.swift in Sources */,
 				FED260E128701D6A001BBF94 /* HomeViewModel.swift in Sources */,
+				FED260FF287123A7001BBF94 /* ObservableType+Extensions.swift in Sources */,
 				FED260FB2870424F001BBF94 /* Location.swift in Sources */,
 				FED260F4287027DF001BBF94 /* LocationManager.swift in Sources */,
 				FED260FD2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift in Sources */,

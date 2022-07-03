@@ -17,6 +17,8 @@ struct HomeViewModel: ViewModelType {
     
     struct Output {
         let requestAuthorization: Driver<Void>
+        let location: Driver<Location>
+        let error: Driver<Error>
     }
     
     private let useCase: HomeUseCase
@@ -31,18 +33,16 @@ struct HomeViewModel: ViewModelType {
         let requestAuthorization = trigger.do(onNext: {
             useCase.requestAuthorization()
         })
-        let didUpdateLocation = trigger.asObservable().flatMapLatest(useCase.didUpdateLocation)
-        didUpdateLocation.asObservable().subscribe(onNext: { result in
-            switch result {
-            case .success(let location):
-                print(location)
-            case .failure(let error):
-                print(error)
-            }
-        }).disposed(by: bag)
+        let didUpdateLocation = trigger.asObservable()
+            .flatMapLatest(useCase.didUpdateLocation)
+            .share()
+        let location = didUpdateLocation.onSuccess()
+        let error = didUpdateLocation.onFailure()
         
         return Output(
-            requestAuthorization: requestAuthorization.asDriverOnEmpty()
+            requestAuthorization: requestAuthorization.asDriverOnEmpty(),
+            location: location.asDriverOnEmpty(),
+            error: error.asDriverOnEmpty()
         )
     }
 }
