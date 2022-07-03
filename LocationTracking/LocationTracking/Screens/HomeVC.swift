@@ -35,7 +35,12 @@ final class HomeVC: UIViewController {
     }
     
     private func configView() {
+        configNavigationView()
         configMapView()
+    }
+    
+    private func configNavigationView() {
+        title = App.Map.title
     }
     
     private func configMapView() {
@@ -52,14 +57,16 @@ final class HomeVC: UIViewController {
         output.requestAuthorization
             .drive()
             .disposed(by: bag)
+
         output.location
             .drive(onNext: { [weak self] location in
                 self?.mapView.centerToLocation(CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng))
-//                self?.addAnnotation(location: location)
+                self?.addAnnotation(location: location)
             })
             .disposed(by: bag)
         
-        output.locations.drive(onNext: { [weak self] locations in
+        // Show all location stored in map view
+        output.locations.filter { !$0.isEmpty }.drive(onNext: { [weak self] locations in
             self?.addAnnotations(locations: locations)
         }).disposed(by: bag)
     }

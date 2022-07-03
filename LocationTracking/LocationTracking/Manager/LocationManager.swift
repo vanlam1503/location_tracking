@@ -10,20 +10,13 @@ import CoreLocation
 import RxSwift
 import RxCocoa
 
-protocol LocationManager {
-    func requestAuthorization()
-    var didUpdateLocation: Observable<Result<Location, Error>> { get }
-}
+final class DefaultLocationManager: NSObject {
 
-final class DefaultLocationManager: NSObject, LocationManager {
-    
+    static let shared = DefaultLocationManager()
     private let locationManager = CLLocationManager()
-    private let _didUpdateLocation: PublishRelay<Result<Location, Error>> = .init()
-    var didUpdateLocation: Observable<Result<Location, Error>> {
-        _didUpdateLocation.asObservable()
-    }
+    fileprivate let didUpdateLocation: PublishRelay<Result<Location, Error>> = .init()
     
-    override init() {
+    override private init() {
         super.init()
     }
     
@@ -42,11 +35,22 @@ extension DefaultLocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else { return }
         let location = Location(lat: lastLocation.coordinate.latitude, lng: lastLocation.coordinate.longitude)
-        _didUpdateLocation.accept(.success(location))
+        didUpdateLocation.accept(.success(location))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        _didUpdateLocation.accept(.failure(error))
+        didUpdateLocation.accept(.failure(error))
         
+    }
+}
+
+extension Reactive where Base: DefaultLocationManager {
+    
+    func requestAuthorization() {
+        base.requestAuthorization()
+    }
+    
+    var didUpdateLocation: Observable<Result<Location, Error>> {
+        base.didUpdateLocation.asObservable()
     }
 }

@@ -28,16 +28,4 @@ extension ObservableType {
             return nil
         }
     }
-
-    func mapObject<Value: Decodable, Error>(to type: Value.Type) -> Observable<Result<Value, Error>> where Element == Result<Data, Error> {
-        return compactMap { result in
-            switch result {
-            case .success(let data):
-                let value = try JSONDecoder().decode(type.self, from: data)
-                return .success(value)
-            case .failure(let error):
-                return .failure(error)
-            }
-        }
-    }
 }

@@ -15,8 +15,4 @@ extension MKMapView {
         let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         setRegion(coordinateRegion, animated: animated)
     }
-
-    func removeAllAnnotations() {
-        removeAnnotations(annotations)
-    }
 }

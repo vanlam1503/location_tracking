@@ -13,11 +13,8 @@ struct Application {
     private let useCaseProvider: UseCaseProvider
     
     private init() {
-        let locationManager = DefaultLocationManager()
-        let locationCache = LocationCache()
         useCaseProvider = DefaultUseCaseProvider(
-            locationManager: locationManager,
-            locationCache: locationCache,
+            locationManager: .shared,
             storage: .shared)
     }
     

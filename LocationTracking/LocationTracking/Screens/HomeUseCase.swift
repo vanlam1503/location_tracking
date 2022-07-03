@@ -13,43 +13,48 @@ import CoreLocation
 protocol HomeUseCase {
     func requestAuthorization()
     func didUpdateLocation() -> Observable<Result<Location, Error>>
-    func fetchAllLocations() -> Observable<[Location]>
+    func fetchAllLocations() -> Observable<Result<[Location], Error>>
+    func store(location: Location) -> Observable<Result<Void, Error>>
 }
 
 struct DefaultHomeUseCase: HomeUseCase {
     
-    private let locationManager: LocationManager
-    private let locationCache: Cache
+    private let locationManager: DefaultLocationManager
     private let storage: StorageManager
 
-    init(locationManager: LocationManager, locationCache: Cache, storage: StorageManager) {
+    init(locationManager: DefaultLocationManager, storage: StorageManager) {
         self.locationManager = locationManager
-        self.locationCache = locationCache
         self.storage = storage
     }
     
     func requestAuthorization() {
-        locationManager.requestAuthorization()
+        locationManager.rx.requestAuthorization()
     }
     
     func didUpdateLocation() -> Observable<Result<Location, Error>> {
-        locationManager.didUpdateLocation
-            .do(onNext: { result in
-                switch result {
-                case .success(let location):
-                    storage.save(location)
-                case .failure: break
-                }
-            })
+        locationManager.rx.didUpdateLocation.filter(\.isSuccess)
     }
     
-    func fetchAllLocations() -> Observable<[Location]> {
+    func store(location: Location) -> Observable<Result<Void, Error>> {
+        return Observable.create { observer in
+            do {
+                try storage.save(location)
+                observer.onNext(.success(()))
+            } catch {
+                observer.onNext(.failure(error))
+            }
+            return Disposables.create()
+        }
+    }
+
+    
+    func fetchAllLocations() -> Observable<Result<[Location], Error>> {
         return Observable.create { observer in
             do {
                 let locations = try storage.fetchAllLocations()
-                observer.onNext(locations)
+                observer.onNext(.success(locations))
             } catch {
-                observer.onNext([])
+                observer.onNext(.failure(error))
             }
             return Disposables.create()
         }

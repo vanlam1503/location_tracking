@@ -10,12 +10,12 @@
 		FE12127128712AE300FDFFC9 /* Storage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE12126F28712AE300FDFFC9 /* Storage.xcdatamodeld */; };
 		FE1212732871306800FDFFC9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1212722871306800FDFFC9 /* StorageManager.swift */; };
 		FE12127528718D5A00FDFFC9 /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12127428718D5A00FDFFC9 /* NSManagedObject+Extensions.swift */; };
+		FE12127C2871DEFE00FDFFC9 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12127B2871DEFE00FDFFC9 /* App.swift */; };
+		FE12127E2871DF1500FDFFC9 /* AppString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12127D2871DF1500FDFFC9 /* AppString.swift */; };
+		FE1212802871E3DD00FDFFC9 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12127F2871E3DD00FDFFC9 /* Result+Extensions.swift */; };
 		FED260A928701C87001BBF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260A828701C87001BBF94 /* AppDelegate.swift */; };
 		FED260B228701C8B001BBF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED260B128701C8B001BBF94 /* Assets.xcassets */; };
 		FED260B528701C8B001BBF94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED260B328701C8B001BBF94 /* LaunchScreen.storyboard */; };
-		FED260C028701C8B001BBF94 /* LocationTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260BF28701C8B001BBF94 /* LocationTrackingTests.swift */; };
-		FED260CA28701C8B001BBF94 /* LocationTrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260C928701C8B001BBF94 /* LocationTrackingUITests.swift */; };
-		FED260CC28701C8B001BBF94 /* LocationTrackingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260CB28701C8B001BBF94 /* LocationTrackingUITestsLaunchTests.swift */; };
 		FED260DA28701D10001BBF94 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260D928701D10001BBF94 /* Application.swift */; };
 		FED260DE28701D53001BBF94 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260DC28701D53001BBF94 /* HomeVC.swift */; };
 		FED260DF28701D53001BBF94 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED260DD28701D53001BBF94 /* HomeVC.xib */; };
@@ -27,45 +27,24 @@
 		FED260EE28702107001BBF94 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260ED28702107001BBF94 /* HomeUseCase.swift */; };
 		FED260F128702167001BBF94 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260F028702167001BBF94 /* UseCaseProvider.swift */; };
 		FED260F4287027DF001BBF94 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260F3287027DF001BBF94 /* LocationManager.swift */; };
-		FED260F628703111001BBF94 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260F528703111001BBF94 /* CLLocationManager+Rx.swift */; };
-		FED260F828703EDD001BBF94 /* LocationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260F728703EDD001BBF94 /* LocationCache.swift */; };
 		FED260FB2870424F001BBF94 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260FA2870424F001BBF94 /* Location.swift */; };
 		FED260FD2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260FC2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift */; };
 		FED260FF287123A7001BBF94 /* ObservableType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */; };
 		FED26101287125B6001BBF94 /* MKMapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26100287125B6001BBF94 /* MKMapView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FED260BC28701C8B001BBF94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FED2609D28701C87001BBF94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FED260A428701C87001BBF94;
-			remoteInfo = LocationTracking;
-		};
-		FED260C628701C8B001BBF94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FED2609D28701C87001BBF94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FED260A428701C87001BBF94;
-			remoteInfo = LocationTracking;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		FE12127028712AE300FDFFC9 /* Storage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storage.xcdatamodel; sourceTree = "<group>"; };
 		FE1212722871306800FDFFC9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		FE12127428718D5A00FDFFC9 /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
+		FE12127B2871DEFE00FDFFC9 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		FE12127D2871DF1500FDFFC9 /* AppString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppString.swift; sourceTree = "<group>"; };
+		FE12127F2871E3DD00FDFFC9 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		FED260A528701C87001BBF94 /* LocationTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED260A828701C87001BBF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED260B128701C8B001BBF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FED260B428701C8B001BBF94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FED260B628701C8B001BBF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FED260BB28701C8B001BBF94 /* LocationTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FED260BF28701C8B001BBF94 /* LocationTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingTests.swift; sourceTree = "<group>"; };
-		FED260C528701C8B001BBF94 /* LocationTrackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationTrackingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FED260C928701C8B001BBF94 /* LocationTrackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingUITests.swift; sourceTree = "<group>"; };
-		FED260CB28701C8B001BBF94 /* LocationTrackingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FED260D928701D10001BBF94 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		FED260DC28701D53001BBF94 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FED260DD28701D53001BBF94 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -75,8 +54,6 @@
 		FED260ED28702107001BBF94 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		FED260F028702167001BBF94 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		FED260F3287027DF001BBF94 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		FED260F528703111001BBF94 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
-		FED260F728703EDD001BBF94 /* LocationCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCache.swift; sourceTree = "<group>"; };
 		FED260FA2870424F001BBF94 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FED260FC2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extensions.swift"; sourceTree = "<group>"; };
 		FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extensions.swift"; sourceTree = "<group>"; };
@@ -90,20 +67,6 @@
 			files = (
 				FED260E928701DF4001BBF94 /* RxSwift in Frameworks */,
 				FED260E728701DF4001BBF94 /* RxCocoa in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED260B828701C8B001BBF94 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED260C228701C8B001BBF94 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				FED260A728701C87001BBF94 /* LocationTracking */,
-				FED260BE28701C8B001BBF94 /* LocationTrackingTests */,
-				FED260C828701C8B001BBF94 /* LocationTrackingUITests */,
 				FED260A628701C87001BBF94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				FED260A528701C87001BBF94 /* LocationTracking.app */,
-				FED260BB28701C8B001BBF94 /* LocationTrackingTests.xctest */,
-				FED260C528701C8B001BBF94 /* LocationTrackingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,43 +100,28 @@
 		FED260A728701C87001BBF94 /* LocationTracking */ = {
 			isa = PBXGroup;
 			children = (
-				FE12126C28712ABD00FDFFC9 /* Resources */,
-				FED260F92870423D001BBF94 /* Model */,
-				FED260F2287026CC001BBF94 /* Manager */,
-				FED260EF28702154001BBF94 /* Provider */,
-				FED260EA2870203C001BBF94 /* Extensions */,
-				FED260E228701D75001BBF94 /* ViewModelType */,
-				FED260DB28701D34001BBF94 /* Screens */,
 				FED260D828701D01001BBF94 /* App */,
 				FED260A828701C87001BBF94 /* AppDelegate.swift */,
+				FED260EA2870203C001BBF94 /* Extensions */,
+				FED260F2287026CC001BBF94 /* Manager */,
+				FED260F92870423D001BBF94 /* Model */,
+				FED260EF28702154001BBF94 /* Provider */,
+				FE12126C28712ABD00FDFFC9 /* Resources */,
+				FED260DB28701D34001BBF94 /* Screens */,
+				FED260E228701D75001BBF94 /* ViewModelType */,
 				FED260B128701C8B001BBF94 /* Assets.xcassets */,
-				FED260B328701C8B001BBF94 /* LaunchScreen.storyboard */,
 				FED260B628701C8B001BBF94 /* Info.plist */,
+				FED260B328701C8B001BBF94 /* LaunchScreen.storyboard */,
 			);
 			path = LocationTracking;
-			sourceTree = "<group>";
-		};
-		FED260BE28701C8B001BBF94 /* LocationTrackingTests */ = {
-			isa = PBXGroup;
-			children = (
-				FED260BF28701C8B001BBF94 /* LocationTrackingTests.swift */,
-			);
-			path = LocationTrackingTests;
-			sourceTree = "<group>";
-		};
-		FED260C828701C8B001BBF94 /* LocationTrackingUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FED260C928701C8B001BBF94 /* LocationTrackingUITests.swift */,
-				FED260CB28701C8B001BBF94 /* LocationTrackingUITestsLaunchTests.swift */,
-			);
-			path = LocationTrackingUITests;
 			sourceTree = "<group>";
 		};
 		FED260D828701D01001BBF94 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FE12127B2871DEFE00FDFFC9 /* App.swift */,
 				FED260D928701D10001BBF94 /* Application.swift */,
+				FE12127D2871DF1500FDFFC9 /* AppString.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -204,12 +148,12 @@
 		FED260EA2870203C001BBF94 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FED260F528703111001BBF94 /* CLLocationManager+Rx.swift */,
 				FED260FC2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift */,
 				FED26100287125B6001BBF94 /* MKMapView+Extensions.swift */,
 				FE12127428718D5A00FDFFC9 /* NSManagedObject+Extensions.swift */,
 				FED260EB28702053001BBF94 /* ObservableConvertibleType+Extensions.swift */,
 				FED260FE287123A7001BBF94 /* ObservableType+Extensions.swift */,
+				FE12127F2871E3DD00FDFFC9 /* Result+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				FED260F3287027DF001BBF94 /* LocationManager.swift */,
-				FED260F728703EDD001BBF94 /* LocationCache.swift */,
 				FE1212722871306800FDFFC9 /* StorageManager.swift */,
 			);
 			path = Manager;
@@ -264,42 +207,6 @@
 			productReference = FED260A528701C87001BBF94 /* LocationTracking.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FED260BA28701C8B001BBF94 /* LocationTrackingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FED260D228701C8B001BBF94 /* Build configuration list for PBXNativeTarget "LocationTrackingTests" */;
-			buildPhases = (
-				FED260B728701C8B001BBF94 /* Sources */,
-				FED260B828701C8B001BBF94 /* Frameworks */,
-				FED260B928701C8B001BBF94 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FED260BD28701C8B001BBF94 /* PBXTargetDependency */,
-			);
-			name = LocationTrackingTests;
-			productName = LocationTrackingTests;
-			productReference = FED260BB28701C8B001BBF94 /* LocationTrackingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FED260C428701C8B001BBF94 /* LocationTrackingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FED260D528701C8B001BBF94 /* Build configuration list for PBXNativeTarget "LocationTrackingUITests" */;
-			buildPhases = (
-				FED260C128701C8B001BBF94 /* Sources */,
-				FED260C228701C8B001BBF94 /* Frameworks */,
-				FED260C328701C8B001BBF94 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FED260C728701C8B001BBF94 /* PBXTargetDependency */,
-			);
-			name = LocationTrackingUITests;
-			productName = LocationTrackingUITests;
-			productReference = FED260C528701C8B001BBF94 /* LocationTrackingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,14 +219,6 @@
 				TargetAttributes = {
 					FED260A428701C87001BBF94 = {
 						CreatedOnToolsVersion = 13.2.1;
-					};
-					FED260BA28701C8B001BBF94 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = FED260A428701C87001BBF94;
-					};
-					FED260C428701C8B001BBF94 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = FED260A428701C87001BBF94;
 					};
 				};
 			};
@@ -340,8 +239,6 @@
 			projectRoot = "";
 			targets = (
 				FED260A428701C87001BBF94 /* LocationTracking */,
-				FED260BA28701C8B001BBF94 /* LocationTrackingTests */,
-				FED260C428701C8B001BBF94 /* LocationTrackingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,20 +251,6 @@
 				FED260B528701C8B001BBF94 /* LaunchScreen.storyboard in Resources */,
 				FED260DF28701D53001BBF94 /* HomeVC.xib in Resources */,
 				FED260B228701C8B001BBF94 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED260B928701C8B001BBF94 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED260C328701C8B001BBF94 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,52 +267,23 @@
 				FED260DE28701D53001BBF94 /* HomeVC.swift in Sources */,
 				FE12127528718D5A00FDFFC9 /* NSManagedObject+Extensions.swift in Sources */,
 				FED260EE28702107001BBF94 /* HomeUseCase.swift in Sources */,
-				FED260F828703EDD001BBF94 /* LocationCache.swift in Sources */,
 				FED260DA28701D10001BBF94 /* Application.swift in Sources */,
 				FED260EC28702053001BBF94 /* ObservableConvertibleType+Extensions.swift in Sources */,
 				FED260F128702167001BBF94 /* UseCaseProvider.swift in Sources */,
 				FED260A928701C87001BBF94 /* AppDelegate.swift in Sources */,
 				FED260E428701D85001BBF94 /* ViewModelType.swift in Sources */,
-				FED260F628703111001BBF94 /* CLLocationManager+Rx.swift in Sources */,
+				FE12127C2871DEFE00FDFFC9 /* App.swift in Sources */,
+				FE12127E2871DF1500FDFFC9 /* AppString.swift in Sources */,
 				FED260E128701D6A001BBF94 /* HomeViewModel.swift in Sources */,
 				FED260FF287123A7001BBF94 /* ObservableType+Extensions.swift in Sources */,
 				FED260FB2870424F001BBF94 /* Location.swift in Sources */,
+				FE1212802871E3DD00FDFFC9 /* Result+Extensions.swift in Sources */,
 				FED260F4287027DF001BBF94 /* LocationManager.swift in Sources */,
 				FED260FD2870428A001BBF94 /* KeyedDecodingContainer+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FED260B728701C8B001BBF94 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FED260C028701C8B001BBF94 /* LocationTrackingTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED260C128701C8B001BBF94 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FED260CC28701C8B001BBF94 /* LocationTrackingUITestsLaunchTests.swift in Sources */,
-				FED260CA28701C8B001BBF94 /* LocationTrackingUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FED260BD28701C8B001BBF94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FED260A428701C87001BBF94 /* LocationTracking */;
-			targetProxy = FED260BC28701C8B001BBF94 /* PBXContainerItemProxy */;
-		};
-		FED260C728701C8B001BBF94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FED260A428701C87001BBF94 /* LocationTracking */;
-			targetProxy = FED260C628701C8B001BBF94 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FED260B328701C8B001BBF94 /* LaunchScreen.storyboard */ = {
@@ -494,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -549,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -615,82 +469,6 @@
 			};
 			name = Release;
 		};
-		FED260D328701C8B001BBF94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W747Q8Z9UW;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamle.LocationTrackingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationTracking.app/LocationTracking";
-			};
-			name = Debug;
-		};
-		FED260D428701C8B001BBF94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W747Q8Z9UW;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamle.LocationTrackingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationTracking.app/LocationTracking";
-			};
-			name = Release;
-		};
-		FED260D628701C8B001BBF94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W747Q8Z9UW;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamle.LocationTrackingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LocationTracking;
-			};
-			name = Debug;
-		};
-		FED260D728701C8B001BBF94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W747Q8Z9UW;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamle.LocationTrackingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LocationTracking;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -708,24 +486,6 @@
 			buildConfigurations = (
 				FED260D028701C8B001BBF94 /* Debug */,
 				FED260D128701C8B001BBF94 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FED260D228701C8B001BBF94 /* Build configuration list for PBXNativeTarget "LocationTrackingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FED260D328701C8B001BBF94 /* Debug */,
-				FED260D428701C8B001BBF94 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FED260D528701C8B001BBF94 /* Build configuration list for PBXNativeTarget "LocationTrackingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FED260D628701C8B001BBF94 /* Debug */,
-				FED260D728701C8B001BBF94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

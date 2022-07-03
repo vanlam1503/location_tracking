@@ -7,12 +7,8 @@
 
 import Foundation
 import CoreData
-
-protocol LocationStorageRepository {
-    func save(_ location: Location)
-    func fetchAll() -> [Location]
-    func fetchOne() -> Location
-}
+import RxSwift
+import RxCocoa
 
 final class StorageManager {
 
@@ -67,9 +63,13 @@ final class StorageManager {
         fetchRequest.predicate = predicate
         return try managedContext.fetch(fetchRequest).map(handle)
     }
+}
 
-    func save(_ location: Location) {
-        try? save(entityName: Config.entityName) { object in
+// MARK: - Locations
+extension StorageManager {
+    
+    func save(_ location: Location) throws {
+        try save(entityName: Config.entityName, predicate: NSPredicate(format: "lat == %lf AND lng == %lf", location.lat, location.lng)) { object in
             object["lat"] = location.lat
             object["lng"] = location.lng
         }
@@ -82,6 +82,7 @@ final class StorageManager {
             return Location(lat: lat, lng: lng)
         }
     }
+
 }
 
 // MARK: - Config

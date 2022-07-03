@@ -11,10 +11,16 @@ struct Location: Codable {
     
     var lat: Double = 0
     var lng: Double = 0
-    var name: String = ""
     
     init(lat: Double, lng: Double) {
         self.lat = lat
         self.lng = lng
+    }
+}
+
+extension Location: Equatable {
+    
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        return (lhs.lat == rhs.lat) && (lhs.lng == rhs.lng)
     }
 }
