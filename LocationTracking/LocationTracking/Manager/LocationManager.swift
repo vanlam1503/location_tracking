@@ -34,7 +34,10 @@ extension DefaultLocationManager: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else { return }
-        let location = Location(lat: lastLocation.coordinate.latitude, lng: lastLocation.coordinate.longitude)
+        let location = Location(
+            lat: lastLocation.coordinate.latitude,
+            lng: lastLocation.coordinate.longitude,
+            description: lastLocation.description)
         didUpdateLocation.accept(.success(location))
     }
     

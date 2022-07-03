@@ -72,6 +72,7 @@ extension StorageManager {
         try save(entityName: Config.entityName, predicate: NSPredicate(format: "lat == %lf AND lng == %lf", location.lat, location.lng)) { object in
             object["lat"] = location.lat
             object["lng"] = location.lng
+            object["des"] = location.description
         }
     }
 
@@ -79,10 +80,10 @@ extension StorageManager {
         return try fetchAll(entityName: Config.entityName) { object in
             let lat: Double = (object["lat"] ?? 0)
             let lng: Double = (object["lng"] ?? 0)
-            return Location(lat: lat, lng: lng)
+            let description: String = (object["des"] ?? "")
+            return Location(lat: lat, lng: lng, description: description)
         }
     }
-
 }
 
 // MARK: - Config

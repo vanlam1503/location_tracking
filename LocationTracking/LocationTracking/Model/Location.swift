@@ -7,15 +7,10 @@
 
 import Foundation
 
-struct Location: Codable {
-    
-    var lat: Double = 0
-    var lng: Double = 0
-    
-    init(lat: Double, lng: Double) {
-        self.lat = lat
-        self.lng = lng
-    }
+struct Location {
+    let lat: Double
+    let lng: Double
+    let description: String
 }
 
 extension Location: Equatable {
